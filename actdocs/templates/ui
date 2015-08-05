@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
+
+<head>
+<!-- Document Metadata -->
+<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+<!-- OpenId -->
+[% IF openid %]
+<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />
+[% END %]
+<!-- Atom news feed -->
+<link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]"
+      href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
+<title>[% global.conference.name %] | [%- IF title -%]- [% title  %][%- END -%]</title>
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" />
+<link rel="stylesheet" type="text/css" href="/css/act-base.css" />
+<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+<!-- JavaScript sugar -->
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/act.js"></script>
+
+<!-- Favorite icon -->
+<link rel="shortcut icon" type="image/png" href="[% make_uri_info('pics', 'favicon.png') %]" />
+</head>
+
+<body>
+
+<!-- HEADER!-->
+<div id="header"></div>
+
+<!-- CONTAINER !-->
+<div id="container">
+
+  <div id="menu">
+    [% PROCESS menu %]
+  </div>
+
+  <div id="content">
+    [%- IF title -%]<h1>[% title %]</h1>[%- END -%]
+    [% content %]
+  </div>
+
+</div>
+
+<!--CLEAR!-->
+<div class="clear"></div>
+
+<!-- FOOTER !-->
+<div id="footer">
+
+  <div id="footer-left">
+    <a target="mongueurs" href="http://mongueurs.net/">Les Mongueurs de Perl</a>
+  | <a href="mailto:book@cpan.org?subject=[[% global.conference.name %]]%20Feedback">Feedback</a>
+  </div>
+  <div id="footer-right">
+    Powered by <a target="perl_dah" href="http://act.mongueurs.net/">Act</a>
+  | Written in <a target="perl_dah" href="http://www.perl.org/">Perl</a>
+  </div>
+</div>
+<!-- [% PROCESS foo %] -->
+</body>
+</html>
+

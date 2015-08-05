@@ -1,0 +1,54 @@
+<div id="menu-inner">
+[% FILTER collapse %]
+<div class="you">
+[% PROCESS menus/user %]
+</div>
+<div class="main">
+  <h2>patch -p3</h2>
+  <ul>
+[% WRAPPER menus/item %]
+	<a href="[% make_uri() %]"><t><en>Home</en><fr>Accueil</fr></t></a>
+[% END %]
+[% WRAPPER menus/item %]
+	<a href="details.html"><t><en>More details</en><fr>Plus d'info</fr></t></a>
+[% END %]
+[% WRAPPER menus/item %]
+<!--    <a href="http://www.flickr.com/photos/47329375@N00/sets/72157638473174955/">Photos</a> -->
+[% END %]
+[% WRAPPER menus/item %]
+  <a href="[% make_uri('wiki') %]">Wiki</a>
+[% END %]
+  </ul>
+</div>
+<div class="users">
+  <h2><t><en>Users</en><fr>Utilisateurs</fr></t></h2>
+[% PROCESS menus/users %]
+</div>
+[% PROCESS menus/admin %]
+<div class="info">
+  <h2>Informations</h2>
+  <ul>
+[% WRAPPER menus/item %]
+	<a target="booking" href="[% make_uri('venue.html') %]"><t><en>Venue</en><fr>Locaux</fr></t></a>
+[% END %]
+[% WRAPPER menus/item %]
+	<a href="[% make_uri('travel.html') %]"><t><en>Travel</en><fr>Accès</fr></t></a>
+[% END %]
+[% WRAPPER menus/item %]
+	<a href="[% make_uri('accommodation.html') %]"><t><en>Accommodation</en><fr>Se loger</fr></t></a>
+[% END %]
+  </ul>
+</div>
+[% PROCESS menus/events %]
+[% END %]
+</div>
+[% FOREACH lang = global.languages %]
+   <span id="goto-lang">
+   <ul>
+   [% WRAPPER menus/item %]
+   <a href="[% lang.uri %]"
+        >&#x2192;&nbsp;[% lang.name %]</a>
+   [% END %]
+   </ul>
+   </span>
+[% END %]

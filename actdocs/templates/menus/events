@@ -1,0 +1,17 @@
+[% IF global.request.user.is_talks_admin %]
+<div class="conf">
+  <h2><t><en>Other conferences</en><fr>Autres conférences</fr></t></h2>
+  <ul>
+   [% WRAPPER menus/item %]
+   <a href="[% make_uri('events') %]">
+     {{Events}}
+   </a>
+   [% END %]
+   [% WRAPPER menus/item %]
+   <a href="[% make_uri('newevent') %]">
+     {{Submit a new event}}
+   </a>
+   [% END %]
+  </ul>
+</div>
+[% END %]

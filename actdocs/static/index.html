@@ -1,0 +1,348 @@
+[% WRAPPER ui title = global.conference.name %]
+
+[% BLOCK fpm %]
+<a href="http://www.mongueurs.pm/" target="_fpm"><t><fr>Mongueurs de Perl</fr><en>French Perl Mongers</en></t></a>
+[% END %]
+[% BLOCK assoc %]
+<a href="http://www.mongueurs.pm/" target="_fpm"><t><fr>association</fr><en>non profit association</en></t></a>
+[% END %]
+[% BLOCK booking %]
+<a href="http://www.booking.com/?aid=313263" target="_booking">Booking.com</a>
+[% END %]
+
+<p>
+<t>
+<en>
+<b>November 27-30, 2014, Booking.com office in Lyon, France.</b>
+</en>
+<fr>
+<b>Du 27 au 30 novembre 2014, bureaux de Booking.com, Lyon, France.</b>
+</fr>
+</t>
+</p>
+
+<p>
+<t>
+<en>
+Welcome to the <b>patch -p3</b> hackathon! A new hackathon for people who love
+<a href="http://www.perl.org/">Perl</a>. This 4 day event will focus on <a href="http://act.mongueurs.net/">Act</a>,
+the conference tool.
+</en>
+<fr>
+Bienvenu au hackathon <b>patch -p3</b>&nbsp;! Un nouvel hackathon pour les amoureux
+de Perl et de son élan moderne. Ce hackathon va se concentrer sur <a href="http://act.mongueurs.net/">Act</a>,
+le système de gestion de conférence.
+</fr>
+</t>
+</p>
+
+<h2><t>
+<fr>Hackathon&nbsp;? C'est quoi&nbsp;?</fr>
+<en>What's a hackathon?</en>
+</t></h2>
+<t>
+<fr>
+<p>
+On trouve plusieurs définitions pour "hackathon", de la simple réunion
+de codeurs au marathon avec objectifs et tout.<br />
+patch -p3 se veut une réunion de hackers pour moderniser 
+<a href="http://act.mongueurs.net/history.html" target="_new">Act</a>.<br />
+[% PROCESS booking %] prête une salle pendant 4 jours.<br />
+L'[% PROCESS assoc %] fournit à boire et à manger.
+</p>
+<p>Pour <a href="details.html#whatsthat">plus de détails</a>...</p>
+</fr>
+<en>
+<p>
+The web has several definition for "hackathon", from the simple meeting
+of coders to the marathon with objectives, time-attack tracks, almost
+organized as an eSport contest.<br />
+patch -p3 will not be that extreme. It will focus a modernization effort on 
+<a href="http://act.mongueurs.net/history.html" target="_new">Act</a>.<br />
+[% PROCESS booking %] provides the room.<br />
+The [% PROCESS fpm %] brings food and beverages.
+</p>
+<p><a href="details.html#whatsthat">More  details</a>...</p>
+</en>
+</t>
+
+<h2><t>
+<fr>Où&nbsp;? Quand&nbsp;?</fr>
+<en>Where? When?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>Ca se passe dans les locaux de <b>[% PROCESS booking %]</b> à Lyon.
+</p>
+<p>On commence le <b>jeudi 27 novembre </b> et on y est jusqu'au <b>dimanche 30</b>, de 9h à 19h00, non-stop.<br />
+</p>
+</fr>
+<en>
+<p>
+This hackathon will be held in <b>[% PROCESS booking %]</b> office in Lyon, France.
+</p>
+<p>
+patch -p3 starts on <b>Thursday Nov 27th and ends on Sunday 30th</b>, from 
+9:00 to 19:00, non-stop.<br />
+</en>
+</t>
+
+<h2><t>
+<fr>C'est combien&nbsp;?</fr>
+<en>How much?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>C'est gratuit.
+</p>
+<p>
+Le trésorier me dit de dire que l'[% PROCESS assoc %] accepte les dons.<br />
+Il existe aussi depuis peu un <a href="http://act.mongueurs.net/fund.html">fond Act</a>
+dont le but est de financer de tels événements pour améliorer
+Act.
+<br />
+Mais l'événement est gratuit.
+</p>
+</fr>
+<en>
+<p>Free. No fee.</p>
+<p>The treasurer of the [% PROCESS fpm %] says I should say that 
+you can donate to our non-profit association if you want to.<br />
+There is also a <a href="http://act.mongueurs.net/fund.html">Fund for Act development</a>
+that is meant to help organizing such an event.<br />
+But the event is free of charge!
+</p>
+</en>
+</t>
+
+
+<h2><t>
+<fr>Faut-il s'inscrire&nbsp;?</fr>
+<en>What about registration?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>Cet événement a lieu dans les locaux de [% PROCESS booking %]. 
+Nous avons donc besoin de savoir qui peut entrer.</p>
+<p>Plus généralement, vous inscrire permet aux organisateurs de mieux 
+vous accueillir.<br />
+Et aussi, cela vous permettra d'écrire sur le wiki.</p>
+<p>Pour <a href="details.html#register">plus de détails</a>...</p>
+
+<p>Pour s'inscrire, <a href="[% make_uri_info('register') %]">ça se passe 
+là</a>.</p>
+
+</fr>
+<en>
+<p>This edition is held in [% PROCESS booking %] office. We need to
+know who can enter and who cannot.</p>
+<p>Moreover it always helps the organizers to know how many people
+to expect. And you can edit the wiki.</p>
+<p><a href="details.html#register">More details</a>...</p>
+<p>
+<a href="[% make_uri_info('register') %]">Register here</a>
+</p>
+</en>
+</t>
+
+<h2><t>
+<fr>Perl 5 ou Perl 6&nbsp;?</fr>
+<en>Perl 5 or Perl 6?</en>
+</t></h2>
+<t>
+<fr>
+<p>
+Act est actuellement écrit en Perl 5. Ce hackathon de rajeunissement
+ne vise pas pour l'instant à le réécrire en Perl 6.<br />
+Cela dit, on pourrait commencer un prototype pour la prochaine génération...
+</p>
+</fr>
+<en>
+<p>
+Act is written in Perl 5. This hackathon of modernization does not aim
+to rewrite it in Perl 6.<br />
+Nevertheless some could start a prototype and prepare the next evolution...
+</p>
+</en>
+</t>
+
+<fr>
+<p>
+<h2><t>
+<fr>Sur place, ça se passe comment&nbsp;?</fr>
+<en>Once I'm here, what's the plan?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>
+Le hackathon aura lieu dans une salle de [% PROCESS booking %]. <br />
+C'est là que les gens travailleront, accès réseau fourni.<br />
+La cafétéria n'est pas loin. Café, du thé,
+jus de fruits, à votre convenance.<br />
+Soit vous savez sur quoi bosser, soit vous venez proposer votre aide. Dans
+les 2 cas, faites-le savoir&nbsp;: on vous orientera si vous avez besoin
+d'un coup de main ou si quelqu'un a besoin de vos compétences.
+</p>
+<p>
+Vous mangez sur place à votre rythme ou vous sortez faire un break.
+</p>
+<p>(Un peu) <a href="details.html#theplan">plus de détails</a>...</p>
+</fr>
+<en>
+<p>
+We will be in a meeting room at [% PROCESS booking %]. <br />
+The lunch room is a couple of meters from it. You'll find there coffee,
+tea, juices, snacks...<br />
+Either you have an idea on what you want to achieve during those 4 days
+or you're just here to help.<br />
+In any case, let it know. We'll arrange connections with people who
+can help you and with people you could help.
+</p>
+<p>
+<p>
+Either you eat on site or you have a break outside. Your choice.
+</p>
+<p>(Some) <a href="details.html#theplan">more details</a>...</p>
+</en>
+</t>
+
+<h2><t>
+<fr>C'est pour qui&nbsp;? Il faut quelles compétences&nbsp;?</fr>
+<en>Who do you expect? Any skill required?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>
+Idéalement, vous avez déjà une connaissance de Perl et 
+vous savez ce qu'est Act (c'est l'outil qui soutient ce site par exemple).<br />
+</p>
+<p>
+Le <a href="http://act.mongueurs.net/" target="_new">site web de Act</a> 
+a aussi besoin d'un coup de jeune. Si vous avez des
+compétences sur le sujet et que vous n'êtes pas allergiques à Perl, venez.
+</p>
+</fr>
+<en>
+<p>
+It's better if you know Perl and Act (the framework behind this
+website, among others).<br />
+</p>
+<p>
+The <a href="http://act.mongueurs.net/" target="_new">website of Act</a> 
+also needs a brand new look. If you think you can help and can survive in
+a room of Perl hackers, come and help.
+</p>
+</en>
+</t>
+
+
+<h2><t>
+<fr>Le Code de Conduite&nbsp;?</fr>
+<en>Code of Conduct?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>Il n'y en a pas. Ou alors il tient en une ligne&nbsp;:<br />
+Tenez-vous bien, faites attention aux autres.
+</p>
+<p>On s'attend à ce que vous vous teniez bien. C'est la bonne façon de passer
+un bon moment.
+</p>
+<p>
+Vous êtes dans les locaux d'une société, respectez le
+travail de ses employés.
+</p>
+<p>
+Ceci dit, les organisateurs sont là.
+<br />
+Ne vous laissez pas embêter (pour rester poli), ne laissez pas quelqu'un se
+faire embêter.
+</p>
+</fr>
+<en>
+<p>None. Or just one sentence:<br />
+Be nice, pay attention to others.
+</p>
+<p>
+We want to have a great time, so we expect you'll behave nicely.
+No need to insist on that.
+</p>
+<p>
+The hackathon is held at [% PROCESS booking %] office. Respect the work of
+the employees.
+</p>
+<p>
+Nevertheless there will be the organizers.
+<br />
+Don't let anyone piss you off, don't let anyone being pissed off.
+</p>
+</en>
+</t>
+
+
+<h2><t>
+<fr>Il y a quelque chose de prévu en soirée&nbsp;?</fr>
+<en>Anything in the evenning?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>
+Pas encore. Mais ça devrait se faire.<br />
+On mettra les infos dans le wiki dès que possible
+</p>
+</fr>
+<en>
+<p>
+Not yet. But, from experience, there will be.<br />
+Details will be in the wiki.
+</p>
+</en>
+</t>
+
+<p>&nbsp;</p>
+
+<p>
+<t>
+<en>
+If you have any questions, email us at <a 
+href="mailto:philippe.bruhat@free.fr">philippe.bruhat@free.fr</a> or
+at <a href="mailto:elbeho@mongueurs.net">elbeho@mongueurs.net</a>.
+</en>
+<fr>
+Si vous avez des questions, écrivez à <a 
+href="mailto:philippe.bruhat@free.fr">philippe.bruhat@free.fr</a> ou
+<a href="mailto:elbeho@mongueurs.net">elbeho@mongueurs.net</a> (en français ou en anglais).
+</fr>
+</t>
+</p>
+
+<p>
+<t>
+<en>
+Please register for the event <a href="[% make_uri_info('register') 
+%]">here</a>.
+</en>
+<fr>
+Merci de vous <a href="[% make_uri_info('register') %]">inscrire</a> pour l'événement.
+</fr>
+</t>
+</p>
+
+<div style="text-align:center;text-valign:middle">
+	<a href="http://mongueurs.net/" target="mongueurs">
+		<img style="margin-left:30px" border="0" src="[% make_uri_info('pics','mongueurs_128x128.png') %]" /></a>
+	&nbsp;
+	<a href="http://www.booking.com/?aid=313263" target="booking">
+		<img style="margin-right:30px" border="0" src="[% make_uri_info('pics', 'logo_bookingcom_225.png') %]" />
+	</a>
+</div>
+
+[% END %]
+

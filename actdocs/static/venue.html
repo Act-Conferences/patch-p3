@@ -1,0 +1,37 @@
+[% title = { fr => 'Hackathon patch -p3 à Lyon', en => 'Patch -p3 Hackathon in Lyon' } ;
+   WRAPPER ui title = title.${global.request.language}                        
+%]
+
+<h2><t><en>The Venue</en><fr>Les locaux</fr></t></h2>
+
+  <p><t>
+   <en>
+    The patch -p3 hackathon will be held in Booking.com premises in Lyon,
+    at 192 avenue Thiers, 69006 Lyon. The office is one tram stop away
+    (8 minutes walk) from <a href="http://www.booking.com/hotel/fr/campanile-lyon-centre-forum-part-dieu.html?aid=313263">the hotel</a>.
+    (<a href="http://goo.gl/maps/ula4R">Directions from the hotel</a>)
+   </en>
+   <fr>
+    Le hackathon patch -p3 se tiendra dans les locaux de <a href="http://www.booking.com/?aid=313263">Booking.com</a> à Lyon, au 192 avenue Thiers,
+    69006 Lyon. Les bureaux sont à un arrêt de tram (8 minutes de marche)
+    de l'<a href="http://www.booking.com/hotel/fr/campanile-lyon-centre-forum-part-dieu.html?aid=313263">hôtel</a>.
+    (<a href="http://goo.gl/maps/ula4R">Trajet depuis l'hôtel</a>)
+   </fr>
+   </t>
+  <p>
+
+<h2><t><en>Venue photos</en><fr>Photos des locaux</fr></t></h2>
+
+  <p><t><en>Here are a few photographs of the venue:</en>
+        <fr>Voici quelques photographies des locaux&nbsp;:</fr></t></p>
+  <h3><t><en>The large meeting room</en>
+         <fr>La grande salle de réunion</fr></t></h3>
+  <img src="[% make_uri('pics/booking_meetingroom1.jpg')%]" />
+  <img src="[% make_uri('pics/booking_meetingroom2.jpg')%]" />
+  <h3><t><en>The open space</en><fr>L'open space</fr></t></h3>
+  <img src="[% make_uri('pics/booking_openspace1.jpg')%]" />
+  <img src="[% make_uri('pics/booking_openspace2.jpg')%]" />
+  <h3><t><en>The kitchen</en><fr>La cuisine</fr></t></h3>
+  <img src="[% make_uri('pics/booking_kitchen.jpg')%]" />
+
+[% END %]
