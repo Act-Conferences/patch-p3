@@ -60,7 +60,6 @@
   | Written in <a target="perl_dah" href="http://www.perl.org/">Perl</a>
   </div>
 </div>
-<!-- [% PROCESS foo %] -->
 </body>
 </html>
 
