@@ -1,4 +1,9 @@
-[% WRAPPER ui title = global.conference.name %]
+[% title = {
+     fr => "Tous les détails sur patch -p3",
+     en => "Everything about patch -p3",
+   }
+   WRAPPER ui title = title.${global.request.language}
+%]
 
 [% BLOCK fpm %]
 <a href="http://www.mongueurs.pm/" target="_fpm"><t><fr>Mongueurs de Perl</fr><en>French Perl Mongers</en></t></a>
@@ -10,21 +15,10 @@
 <a href="http://www.booking.com/?aid=313263" target="_booking">Booking.com</a>
 [% END %]
 
-<p>
-<t><fr>
-(Plus de détails sur patch -p3)
-</fr><en>
-(More details on patch -p3 hackathon)
-</en></t>
-</p>
-
-
-<a name="whatsthat"></a>
-<h2><t>
-<fr>Hackathon&nbsp;? C'est quoi&nbsp;?</fr>
-<en>What's a hackathon?</en>
+<h2><a name="what"></a><t>
+<fr>C'est quoi un hackathon&nbsp;?</fr>
+<en>What is a hackathon?</en>
 </t></h2>
-
 <t>
 <fr>
 <p>
@@ -38,13 +32,13 @@ chaises, électricité, réseau...<br />
 L'[% PROCESS assoc %] fournit à boire et à manger.
 </p>
 <p>
-<b>En résumé</b>, [% PROCESS booking %] et les [% PROCESS fpm %] mettent 
+<b>En résumé</b>, [% PROCESS booking %] et les [% PROCESS fpm %] mettent
 à votre disposition un environnement de travail, gratuitement, pour une
 journée entière.
 </p>
 <p>
 Il y a eu patch -p0 en juillet 2013, patch -p1 en décembre 2013, patch -p2
-en novembre 2014.  Ce patch -p3 a lieu le 12 septembre 2015.<br />
+en novembre 2014. Ce patch -p3 a lieu le 12 septembre 2015.<br />
 </p>
 </fr>
 <en>
@@ -64,17 +58,17 @@ The [% PROCESS fpm %] bring food and beverages.<br />
 provide you with a working environment, free entrance, for a full day.
 </p>
 <p>
-We made patch -p0 in July 2013, patch -p1 in Decembre 2013, both in Paris;
+We organized patch -p0 in July 2013, patch -p1 in Decembre 2013, both in Paris;
 patch -p2 in November 2014 in Lyon. patch -p3 will be held in September 12th 2015,
 in Lyon as well.
 </p>
 </en>
 </t>
 
-<a name="whenwhere"></a>
+<a name="where"></a>
 <h2><t>
-<fr>Où&nbsp;? Quand&nbsp;?</fr>
-<en>Where? When?</en>
+<fr>Ça se passe où&nbsp;?</fr>
+<en>Where is this happening?</en>
 </t></h2>
 
 <t>
@@ -84,28 +78,82 @@ in Lyon as well.
 </p>
 <p>C'est le <b>samedi 12 septembre 2015</b>, de 9h à 19h00, non-stop.<br />
 (Ce sont les horaires d'accès. Vous venez quand vous voulez, mais
-<a href="/p3/register">inscrivez-vous</a> pour avoir l'accès.)
+<a href="[% make_uri('register') %]">inscrivez-vous</a> pour avoir l'accès.)
 </p>
 </fr>
 <en>
 <p>
 This patch hackathon will be held in the office of <b>[% PROCESS booking %]</b>,
 192 avenue Thiers, in Lyon, France.<br />
-It's 5 to 10 minutes from a Part-Dieu train station, by foot (follow the 
+It's 5 to 10 minutes from a Part-Dieu train station, by foot (follow the
 tramway to the left).
 </p>
 <p>
-patch -p3 is happning on <b>Saturday September 12</b>, from 
+patch -p3 is happning on <b>Saturday September 12</b>, from
 9:00 to 19:00, non-stop.<br />
 (These are opening hours. You come and leave when you want, but please
-<a href="/p3/register">register</a> to get access.)
+<a href="[% make_uri('register') %]">register</a> to get access.)
+</en>
+</t>
+
+<a name="register"></a>
+<h2><t>
+<fr>L'inscription est obligatoire&nbsp;?</fr>
+<en>Is registration required?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>Cette fois-ci, c'est obligatoire&nbsp;: nous serons dans les locaux
+d'une société qui veut savoir qui fréquente ses locaux.</p>
+<p>De plus</p>
+<ul>
+<li>
+cela permet d'écrire sur le wiki (ce qu'on a fait, ce qu'on voudrait faire...),
+</li>
+<li>
+le nombre de places est limitée (20 places),
+</li>
+<li>
+les organisateurs peuvent prévoir le "ravitaillement" en conséquence.
+</li>
+</ul>
+<p>Cela dit, pour savoir s'il y a de la place le jour même 
+passez sur IRC, canal <a href="https://chat.mibbit.com/?channel=%23patch&server=irc.perl.org">#patch</a> de irc.perl.org et demandez s'il y reste de la place.
+</p>
+
+<p>Pour s'inscrire, <a href="[% make_uri_info('register') %]">ça se passe ci</a>.</p>
+
+<p>
+Si vous avez un empêchement (ou que vous changez d'avis), pensez à vous
+désinscrire (par le même lien), là encore pour donner de la visibilité
+aux organisateurs (si vous oubliez, ce n'est pas grave. On ne fera pas
+l'appel).
+</fr>
+<en>
+<p>This is mandatory for this edition: [% PROCESS booking %] offices are
+ not open to public. They need to know their guests.</p>
+<p>Moreover:</p>
+<ul>
+<li>you need to register to write on the wiki (what you want to done, what you've done...),</li>
+<li>we have 20 seats only,</li>
+<li>knowing the number of attendees helpsthe organizers to buy beverages, food, coffee accordingly</li>
+</ul>
+</p>
+<p>
+If you want to make a last minute appearance at the hackathon,
+connect to IRC, channel <a href="https://chat.mibbit.com/?channel=%23patch&server=irc.perl.org">#patch</a> of irc.perl.org and simply ask about it.
+</p>
+<p>
+<a href="[% make_uri_info('register') %]">Register here</a>
+</p>
 </en>
 </t>
 
 <a name="howmuch"></a>
 <h2><t>
-<fr>C'est combien&nbsp;?</fr>
-<en>How much?</en>
+<fr>Combien ça coûte&nbsp;?</fr>
+<en>How much does it cost?</en>
 </t></h2>
 
 <t>
@@ -128,82 +176,66 @@ But <b>the event is free of charge</b>!
 </en>
 </t>
 
-
-<a name="register"></a>
+<a name="projects"></a>
 <h2><t>
-<fr>Faut-il s'inscrire&nbsp;?</fr>
-<en>What about registration?</en>
-</t></h2>
-
-<t>
-<fr>
-<p>Cette fois-ci, c'est obligatoire&nbsp;: nous serons dans les locaux
-d'une société qui veut savoir qui fréquente ses locaux.</p>
-<p>De plus</p>
-<ul>
-<li>
-cela permet d'écrire sur le wiki (ce qu'on a fait, ce qu'on voudrait faire...),
-</li>
-<li>
-le nombre de places est limitée (20 places),
-</li>
-<li>
-les organisateurs peuvent prévoir le "ravitaillement" en conséquence.
-</li>
-</ul>
-<p>Cela dit, pour savoir s'il y a de la place le jour même, 
-passez sur IRC, canal <a href="https://chat.mibbit.com/?channel=%23patch&server=irc.perl.org">#patch</a> de irc.perl.org et demandez s'il y a de la place.
-</p>
-
-<p>Pour s'inscrire, <a href="[% make_uri_info('register') %]">ça se passe 
-là</a>.</p>
-
-<p>
-Si vous avez un empêchement (ou que vous changez d'avis), pensez à vous
-désinscrire (par le même lien), là encore pour donner de la visibilité
-aux organisateurs (si vous oubliez, ce n'est pas grave. On ne fera pas
-l'appel).
-</fr>
-<en>
-<p>This is mandatory for this edition: [% PROCESS booking %] office if
- not open to public. They need to know their guests.</p>
-<p>Moreover</p>
-<ul>
-<li>you need to register to write on the wiki (what you want to done, what you've done...),</li>
-<li>we have 20 seats, we cannot go above</li>
-<li>knowing how many we could be allow the organizers to buy beverages, food, coffee accordingly</li>
-</ul>
-</p>
-<p>
-If you want to know if you can come "right now, I can be there in 30 min",
-connect IRC, channel <a href="https://chat.mibbit.com/?channel=%23patch&server=irc.perl.org">#patch</a> of irc.perl.org and ask.
-</p>
-<p>
-<a href="[% make_uri_info('register') %]">Register here</a>
-</p>
-</en>
-</t>
-
-<a name="perl5perl6"></a>
-<h2><t>
-<fr>Perl 5 ou Perl 6&nbsp;?</fr>
-<en>Perl 5 or Perl 6?</en>
+<fr>Il faut se préparer&nbsp;?</fr>
+<en>Is there a need for preparation?</en>
 </t></h2>
 <t>
 <fr>
 <p>
+Le hackathon ne durant qu'une journée, pour que celle-ci soit productive,
+il est important de venir préparé-e.
 </p>
+<p>Regardez le <a href="[% make_uri( 'wiki?node=Projets' ) %]">wiki</a>,
+cherchez un projet qui vous intéresse ou ajoutez le vôtre.
 </fr>
 <en>
 <p>
+The hackathon only last for one day. If you want this to be a productive,
+it's important to be prepared.
+</p>
+<p>
+Have a look at the <a href="[% make_uri( 'wiki?node=Projets' ) %]">wiki</a>,
+look for an interesting project or add your own.
 </p>
 </en>
 </t>
 
-<a name="theplan"></a>
+<a name="level"></a>
 <h2><t>
-<fr>Sur place, ça se passe comment&nbsp;?</fr>
-<en>Once I'm here, what's the plan?</en>
+<fr>C'est pour les experts&nbsp;?</fr>
+<en>So it's for experts?</en>
+</t></h2>
+
+<t>
+<fr>
+<p>
+Idéalement, vous avez déjà une connaissance du Perl.<br />
+Nous n'avons pas prévu de formation en tant que telle, mais si vous
+débutez, on vous mettra le pied à l'étrier.
+</p>
+<p>
+&Agrave; partir de là, débutant, codeur occasionel, expert...
+tout le monde est le bienvenu.
+</p>
+</fr>
+<en>
+<p>
+It's better if you know Perl.<br />
+We haven't planned any 'initiation' session. If you're a beginner,
+we'll help you to start, to progress.
+</p>
+<p>
+We welcome everyone: beginners, casual coder, expert!
+</p>
+</en>
+</t>
+
+<a name="how"></a>
+<h2><t>
+<fr>Et le jour J&nbsp;? Ça se passe comment&nbsp;?</fr>
+<en>What happens on the big day?</en>
 </t></h2>
 
 <t>
@@ -215,14 +247,15 @@ C'est là que les gens travailleront, accès réseau fourni.<br />
 La cafétéria n'est pas loin. Café, du thé,
 jus de fruits, à votre convenance.<br />
 Soit vous savez sur quoi bosser, soit vous venez proposer votre aide. Dans
-les 2 cas, faites-le savoir&nbsp;: on vous orientera si vous avez besoin
+les deux cas, faites-le savoir&nbsp;: on vous orientera si vous avez besoin
 d'un coup de main ou si quelqu'un a besoin de vos compétences.
 </p>
 <p>
 Vous mangez sur place à votre rythme ou vous sortez faire un break.
 </p>
 <p>
-On va initier une page sur le wiki avant le début de la conférence pour
+La page <a href="[% make_uri( 'wiki?node=Projets' ) %]">Projets</a>
+du wiki est disponible pour
 que vous puissiez mettre vos projets ou indiquer votre disponibilité.<br />
 (Il faut être inscrit à l'événement, sur ce site, pour pouvoir modifier
 le wiki).
@@ -259,8 +292,9 @@ can help you, or that you could help.
 Either you eat on site or you have a break outside. Your choice.
 </p>
 <p>
-We will start a wiki entry before the hackathon so one can write what
-s?he plan to work on or propose one's help.<br />
+The page <a href="[% make_uri( 'wiki?node=Projets' ) %]">Projets</a>
+on the wiki is available so that one can write what
+they plan to work on or offer their help.<br />
 (You'll have to be registered to modify the wiki).
 </p>
 <p>
@@ -281,73 +315,16 @@ tell it. We want healthy and happy hackers!
 </t>
 
 
-<a name="whocancome"></a>
+<a name="coc"></a>
 <h2><t>
-<fr>C'est pour qui&nbsp;? Il faut quelles compétences&nbsp;?</fr>
-<en>Who do you expect? Any skill required?</en>
+<fr>Code de Conduite</fr>
+<en>Code of Conduct</en>
 </t></h2>
 
 <t>
 <fr>
-<p>
-Idéalement, vous avez déjà une connaissance de Perl, mais nous sommes
-ouverts. Si vous pensez pouvoir tenir le coup dans un salle pleine
-de hackers Perl, venez nous rejoindre&nbsp;!
-</p>
 </fr>
 <en>
-<p>
-It's better if you know Perl, but we're open-minded.
-If you think you can survive in a room full of Perl hackers, come and
-join us.
-</p>
-</en>
-</t>
-
-
-
-<a name="coduct"></a>
-<h2><t>
-<fr>Le Code de Conduite&nbsp;?</fr>
-<en>Code of Conduct?</en>
-</t></h2>
-
-<t>
-<fr>
-<p>Il n'y en a pas. Ou alors il tient en une ligne&nbsp;:<br />
-Tenez-vous bien, faites attention aux autres.
-</p>
-<p>On s'attend à ce que vous vous teniez bien. C'est la bonne façon de passer
-un bon moment.
-</p>
-<p>
-Vous êtes dans les locaux d'une société, respectez le
-travail de ses employés.
-</p>
-<p>
-Ceci dit, les organisateurs sont là.
-<br />
-Ne vous laissez pas embêter (pour rester poli), ne laissez pas quelqu'un se
-faire embêter.
-</p>
-</fr>
-<en>
-<p>None. Or just one sentence:<br />
-Be nice, pay attention to others.
-</p>
-<p>
-We want to have a great time, so we expect you'll behave nicely.
-No need to insist on that.
-</p>
-<p>
-The hackathon is held at [% PROCESS booking %] office. Respect the work of
-the employees.
-</p>
-<p>
-Nevertheless there will be the organizers.
-<br />
-Don't let anyone piss you off, don't let anyone being pissed off.
-</p>
 </en>
 </t>
 
@@ -357,14 +334,12 @@ Don't let anyone piss you off, don't let anyone being pissed off.
 <p>
 <t>
 <en>
-If you have any questions, email us at <a 
-href="mailto:philippe.bruhat@free.fr">philippe.bruhat@free.fr</a> or
+If you have any questions, email us at <a href="mailto:book@cpan.org">book@cpan.org</a> or
 at <a href="mailto:elbeho@mongueurs.net">elbeho@mongueurs.net</a>.
 </en>
 <fr>
-Si vous avez des questions, écrivez-nous à <a 
-href="mailto:philippe.bruhat@free.fr">philippe.bruhat@free.fr</a> ou
-<a href="mailto:elbeho@mongueurs.net">elbeho@mongueurs.net</a> (en français ou en anglais).
+Si vous avez des questions, écrivez-nous à <a href="mailto:book@cpan.org">book@cpan.org</a> ou
+<a href="mailto:elbeho@mongueurs.net">elbeho@mongueurs.net</a>.
 </fr>
 </t>
 </p>
