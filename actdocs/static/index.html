@@ -99,7 +99,7 @@ Saturday, September 12<sup>th</sup> 2015, from 9h to 19h00 (non-stop).</li>
  %]
 
 [% IF news.size %]
-<h2><t><fr>Dernières nouvelles</fr><en>Latest News</en></h2>
+<h2><t><fr>Dernières nouvelles</fr><en>Latest News</en></t></h2>
 [% FOREACH item = news %]
  <h3>[% date_format(item.datetime, 'date_short') %] - [% item.title %]</h3>
  <p>[% item.content %]</p>
